@@ -1,0 +1,22 @@
+sergiodilapi/
+├── _config.yml               <-- configurazione globale
+├── Gemfile                   <-- dipendenze Ruby
+├── index.html                <-- entry point
+├── skills.html               <-- pagina skills ( gestita da Jekyll)
+├── study.html                <-- pagina skills ( gestita da Jekyll)
+├── blog.html                 <-- pagina skills ( gestita da Jekyll)
+|
+├── _layouts/                 <-- modelli di base per le pagine
+|   ├── default.html
+|   └── post.html
+|
+├── _posts/                   <-- cartella del blog
+|   └── 2025-12-01-primo-articolo.md
+|
+├── _study_in_public/         <-- cartella di raccolta di study
+|   └── calcolo-differenziale.md
+|   └── css-grid.md
+|
+└── assets/                   <-- cartelle per gli asset statici
+    └── css/                  <-- sottocartelle per il css
+        └── style.css         <-- file css

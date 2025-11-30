@@ -1,0 +1,13 @@
+# Cartella di output di Jekyll (Il sito costruito)
+_site/
+
+# Dipendenze Ruby/Jekyll
+.jekyll-cache/
+.sass-cache/
+vendor/
+
+# File di configurazione locale
+.jekyll-metadata
+
+# File di testo miei
+jekyll_struct.txt

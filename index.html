@@ -1,10 +1,61 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Sergio Di Lapi</title>
-</head>
-<body>
-  <h1>Sergio Di Lapi</h1>
-  <h3>Benvenuto nel mio sito web!</h3>
-</body>
-</html>
+---
+layout: default
+title: Home Page | Sergio Dilapi - Developer
+---
+
+<section class="hero">
+  <h1>Ciao, sono Sergio Dilapi 👋</h1>
+  <p class="subtitle">
+    Sviluppatore software e appassionato di apprendimento pubblico.
+    Qui condivido i miei pensieri sul codice (Blog) e i miei appunti di studio (Study Log).
+  </p>
+  <p>
+    <a href="{{ '/skills.html' | relative_url }}" class="button-primary">Scopri le mie Competenze &rarr;</a>
+  </p>
+</section>
+
+---
+
+<section class="latest-posts">
+  <h2>📝 Ultimi Articoli del Blog</h2>
+
+  {% assign posts_limit = 3 %}
+  {% for post in site.posts limit: posts_limit %}
+    <article class="post-summary">
+      <h3>
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </h3>
+      <p class="post-meta">Pubblicato il: {{ post.date | date: "%d %B %Y" }}</p>
+      
+      <div class="excerpt-text">
+        {{ post.excerpt | strip_html | truncatewords: 30 }}
+        <a href="{{ post.url | relative_url }}">Continua a leggere...</a>
+      </div>
+    </article>
+  {% endfor %}
+
+  <div class="section-link">
+    <a href="{{ '/blog.html' | relative_url }}">Visualizza tutti gli articoli del Blog &rarr;</a>
+  </div>
+</section>
+
+---
+
+<section class="study-log-preview">
+  <h2>🧠 Ultimi Appunti dallo Study Log</h2>
+  
+  {% assign study_limit = 3 %}
+  {% for study_item in site.study_in_public limit: study_limit %}
+    <article class="study-summary">
+      <h4>
+        <a href="{{ study_item.url | relative_url }}">{{ study_item.title | escape }}</a>
+      </h4>
+      <p class="study-meta">Ultimo aggiornamento: {{ study_item.date | date: "%d %B %Y" }}</p>
+      <p>{{ study_item.excerpt | strip_html | truncatewords: 25 }}</p>
+    </article>
+  {% endfor %}
+
+  <div class="section-link">
+    <a href="{{ '/study.html' | relative_url }}">Visualizza tutto lo Study Log &rarr;</a>
+  </div>
+</section>
