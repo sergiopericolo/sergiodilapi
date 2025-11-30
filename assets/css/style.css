@@ -1,40 +1,27 @@
-
-@use "sass:math";
-
-@import "minima";
-
-/* --- 3. IL TUO STILE PERSONALIZZATO INIZIA QUI --- */
-
-.site-header {
-    background-color: #2c3e50; /* Blu scuro */
-    padding: 15px 0;
-}
-
-.site-title {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: bold;
-    display: block; /* per facilitare la navigazione mobile */
-}
-
-.site-nav a {
-    color: #ecf0f1; /* Grigio chiaro */
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-.site-footer {
-    border-top: 1px solid #ccc;
-    text-align: center;
-    padding: 20px 0;
-    color: #7f8c8d;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
-.post-item {
-    margin-bottom: 30px;
-    padding: 15px;
-    border-left: 5px solid #3498db; /* Striscia blu sul lato */
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+header {
+    background-color: rgb(25, 25, 25);
+    padding: 40px;
+}
+
+.header-content{
+    font-family: Courier, Arial, sans-serif;
+    color: #dcdcdc;
+    max-width: 960px; 
+    margin: 0 auto;
+    text-align: left;
+}
+
+nav {
+    font-family: Helvetica, Arial, sans-serif; 
+    line-height: 1.6;
+    color: #333; 
+    background-color: #e0e0e0; 
+    padding: 50px;
 }
