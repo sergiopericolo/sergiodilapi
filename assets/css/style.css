@@ -1,82 +1,129 @@
+/* GENERAL STYLE */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html, body {
+    font-family: Courier, Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.site-wrapper {
+    flex: 1 0 auto; 
+}
+
+
+
+
+
+
+/* HEADER STYLE */
 
 header {
     background-color: rgb(25, 25, 25);
-    padding-left: 200px;
+    padding-left: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
 .header-content{
-    font-family: Courier, Arial, sans-serif;
-    color: #dcdcdc;
-    max-width: 960px; 
-    margin: 0 auto;
-    text-align: left;
+    color: #fff;
+    width: 100%;
+    max-width: 1400px; 
+    margin: 10px auto;
+    align-self: center;
 }
 
+
+
+
+/* PRESENTATION STYLE */
+
+.content-wrapper-description {
+    width: 100%;
+    max-width: 1400px; 
+    margin: 10px auto;
+    align-self: center;
+}
+
+.description {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 1400px;
+    text-align: left; 
+}
+
+
+
+
+
+/* OTHER STYLE */
+
 nav {
-    font-family: Helvetica, Arial, sans-serif; 
     line-height: 1.6;
     color: #333; 
-    background-color: #e0e0e0; 
+    background-color: #fff; 
     padding: 50px;
 }
 
-/* ====================================
-   STRUTTURA BASE DEL CONTENUTO 
-   ==================================== */
-.content-wrapper {
-    max-width: 1500px; /* Larghezza massima per centrare i box */
-    margin: 40px auto;
-    padding: 0 20px; /* Padding laterale per schermi piccoli */
+body {
+    display: flex;
+    flex-direction: column; 
 }
 
-/* ====================================
-   LAYOUT DEI 3 BOX (Flexbox) 
-   ==================================== */
+footer {
+    color: #fff;
+    text-align: right;
+    background-color: rgb(25, 25, 25);
+    padding: 40px;
+    width: 100%;
+}
+
+.content-wrapper {
+    max-width: 1400px; 
+    margin: 10px auto;
+    padding: 0 20px; 
+}
 
 .feature-boxes {
-    display: flex; /* Attiva il layout Flexbox */
-    gap: 20px;     /* Spazio tra i box */
-    flex-wrap: wrap; /* Importante: permette ai box di andare a capo su schermi stretti */
-    justify-content: space-between; /* Distribuisce lo spazio tra i box */
+    display: flex; 
+    gap: 20px;     
+    flex-wrap: wrap; 
+    justify-content: space-between; 
 }
 
 .feature-box {
-    /* Il 30% circa per lasciare spazio al gap e permettere 3 box sulla stessa riga */
-    flex: 1 1 300px; /* Cresce, non si restringe, dimensione base di 300px */
+    flex: 1 1 300px; 
     
     background-color: #fff;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leggera ombra */
-    text-align: center; /* Centra il testo all'interno del box */
+    box-shadow: 0 4px 8px rgb(25, 25, 25);
 }
 
-/* ====================================
-   STILE CTA (Call to Action) 
-   ==================================== */
+.box-button {
+    text-align: right;    
+}
 
 .cta-button {
-    display: inline-block; /* Rende il link un blocco per il padding */
+    display: inline-block;
     margin-top: 20px;
-    padding: 10px 20px;
-    font-family: Courier, Arial, sans-serif;    
-    /* Colori di stile */
-    background-color: #3a3a3a; /* Blu accattivante */
-    color: white !important; /* Forza il colore bianco sul testo */
+    padding: 10px 20px;  
+
+    background-color: rgb(25, 25, 25);
+    color: white !important; 
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s; /* Animazione al passaggio del mouse */
+    transition: background-color 0.1;
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    color: rgb(24, 24, 24) !important; 
+    background-color: #ffcc00;
 }
